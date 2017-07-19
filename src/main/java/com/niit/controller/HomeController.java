@@ -24,7 +24,7 @@ public class HomeController {
 	{
 		ModelAndView mv = new ModelAndView("Home");
 		//model.addAttribute("message", "Thank you for visiting Shopping Cart");
-		mv.addObject("message", "Thank you for visiting Shopping Cart");
+		mv.addObject("message", "Thank you for visiting Shopping Cart. Please login to Continue...");
 		
 		return mv;
 	}
@@ -35,7 +35,7 @@ public class HomeController {
 	{
 		model.addAttribute("isUserClickedLogin", "true");
 	
-		return "Login";
+		return "Home";
 	}
 	
 	@RequestMapping("/Registration")
@@ -45,6 +45,41 @@ public class HomeController {
 		
 		return "Home";
 	}
+	@RequestMapping("/Contact")
+	public String contactPage(Model model)
+	{
+		model.addAttribute("isUserClickedContact", "true");
+		
+		return "Home";
+	}
+	@RequestMapping("/Home")
+	public String WebSiteName(Model model)
+	{
+		model.addAttribute("isUserClickedWebSiteName", "true");
+		
+		return "Home";
+	}
 
+	@RequestMapping("/hello")
+	public  ModelAndView goToHello()
+	
+	{
+		ModelAndView mv = new ModelAndView("hello");
+		//model.addAttribute("message", "Thank you for visiting Shopping Cart");
+		mv.addObject("message", "Thank you for visiting Shopping Cart");
+		
+		return mv;
+	}
+
+	@RequestMapping("/productpage")
+	public  ModelAndView goproductpage()
+	
+	{
+		ModelAndView mv = new ModelAndView("productpage");
+		//model.addAttribute("message", "Thank you for visiting Shopping Cart");
+		
+		
+		return mv;
+	}
 
 }
