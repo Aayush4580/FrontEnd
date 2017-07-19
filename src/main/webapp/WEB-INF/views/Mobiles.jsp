@@ -51,7 +51,10 @@
 </style>
 </head>
 <body>
+<<<<<<< HEAD
 <div><jsp:include page="navbar.jsp"></jsp:include></div>
+=======
+>>>>>>> origin/master
 	<div>
 		<div class="container-fluid">
 			<div class="row content">
@@ -120,12 +123,17 @@
  					
                </td>
                
+<<<<<<< HEAD
                <%-- <td><a class="btn btn-primary" href="<c:url value='/myCart' />">Add To Cart</a></td> --%>
+=======
+               
+>>>>>>> origin/master
             </tr>
          </c:forEach>
       </table>
 
 				
+<<<<<<< HEAD
 		
 							
 				
@@ -139,6 +147,19 @@
 	</div>
 	</div>
 	<br><br><br><br>
+=======
+		</form>		
+				
+				
+				
+				
+				
+			</div>
+		</div>
+	</div>
+	</div>
+	
+>>>>>>> origin/master
 
 
 

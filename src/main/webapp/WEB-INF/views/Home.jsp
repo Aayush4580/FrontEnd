@@ -46,6 +46,7 @@
 		<h2>Welcome to Shopping Cart</h2>
 	</center>
 	${message}
+<<<<<<< HEAD
 	<div class="mainmenu-wrapper">
 	
 <div class="menuextras">
@@ -68,6 +69,10 @@
 		        </div>
 		        </div>
 		       
+=======
+	
+
+>>>>>>> origin/master
 	<jsp:include page="navbar.jsp"></jsp:include>
 
 

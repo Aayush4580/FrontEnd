@@ -11,11 +11,17 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.niit.shoppingcart.dao.CategoryDAO;
+<<<<<<< HEAD
 import com.niit.shoppingcart.dao.MyCartDAO;
 import com.niit.shoppingcart.dao.ProductDAO;
 import com.niit.shoppingcart.dao.UserDAO;
 import com.niit.shoppingcart.domain.Category;
 import com.niit.shoppingcart.domain.MyCart;
+=======
+import com.niit.shoppingcart.dao.ProductDAO;
+import com.niit.shoppingcart.dao.UserDAO;
+import com.niit.shoppingcart.domain.Category;
+>>>>>>> origin/master
 import com.niit.shoppingcart.domain.Product;
 import com.niit.shoppingcart.domain.User;
 
@@ -30,6 +36,7 @@ private static Logger log = LoggerFactory.getLogger(UserController.class);
 	@Autowired CategoryDAO categoryDAO;
 	
 	@Autowired  Category  category;
+<<<<<<< HEAD
 
 	@Autowired ProductDAO productDAO;
 	
@@ -39,6 +46,12 @@ private static Logger log = LoggerFactory.getLogger(UserController.class);
 	
 	@Autowired  MyCartDAO  myCartDAO;
 	
+=======
+@Autowired ProductDAO productDAO;
+	
+	@Autowired  Product  product;
+	
+>>>>>>> origin/master
 	@Autowired  HttpSession session;
 	
 	//get the user id and password from login page
@@ -49,6 +62,10 @@ private static Logger log = LoggerFactory.getLogger(UserController.class);
 	public ModelAndView login(@RequestParam("userName") String id,@RequestParam("password") String password)
 	
 	{
+<<<<<<< HEAD
+=======
+		
+>>>>>>> origin/master
 		log.debug("Starting of the method login");
 		
 		log.info("You are login with the id "+id);
@@ -62,11 +79,23 @@ private static Logger log = LoggerFactory.getLogger(UserController.class);
 			 user = userDAO.get(id);
 			mv.addObject("message","Welcome "+user.getName());
 			
+<<<<<<< HEAD
+=======
+			log.debug("Valid credentials");
+			 
+			 user = userDAO.get(id);
+			mv.addObject("message","Welcome "+user.getName());
+			
+>>>>>>> origin/master
 			mv.addObject("categoryList", categoryDAO.list());
 			 mv.addObject("category", category);
 			 
 			//store the user id in the session
+<<<<<<< HEAD
 			 session.setAttribute("loggedInUserid", id);
+=======
+			 session.setAttribute("logedInUserID", id);
+>>>>>>> origin/master
 //check whether user is customer or admin
 			 
 			 if(user.getRole().equals("ROLE_ADMIN"))
@@ -100,8 +129,12 @@ private static Logger log = LoggerFactory.getLogger(UserController.class);
 	{
 		ModelAndView mv = new ModelAndView("Mobiles");
 		//model.addAttribute("message", "Thank you for visiting Shopping Cart");
+<<<<<<< HEAD
 		mv.addObject("categoryList", categoryDAO.list());
 		mv.addObject("category", category);
+=======
+		
+>>>>>>> origin/master
 		
 		return mv;
 	}
@@ -116,5 +149,8 @@ private static Logger log = LoggerFactory.getLogger(UserController.class);
 		
 		return mv;
 	}
+<<<<<<< HEAD
 	
+=======
+>>>>>>> origin/master
 }

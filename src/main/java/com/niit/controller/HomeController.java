@@ -50,6 +50,7 @@ public class HomeController {
 		
 		return "Home";
 	}
+<<<<<<< HEAD
 	
 	@RequestMapping("/register")
 	public  ModelAndView addUser(@RequestParam("id") String id,@RequestParam("name") String name,@RequestParam("password") String password,@RequestParam("contact") String contact)
@@ -86,6 +87,23 @@ public class HomeController {
 		return "Home";
 	}
 
+=======
+	@RequestMapping("/Contact")
+	public String contactPage(Model model)
+	{
+		model.addAttribute("isUserClickedContact", "true");
+		
+		return "Home";
+	}
+	@RequestMapping("/Home")
+	public String WebSiteName(Model model)
+	{
+		model.addAttribute("isUserClickedWebSiteName", "true");
+		
+		return "Home";
+	}
+
+>>>>>>> origin/master
 	@RequestMapping("/hello")
 	public  ModelAndView goToHello()
 	
@@ -107,7 +125,10 @@ public class HomeController {
 		
 		return mv;
 	}
+<<<<<<< HEAD
 	
 	
+=======
+>>>>>>> origin/master
 
 }
